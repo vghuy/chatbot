@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Ask me everything</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <style>
+      body {
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 0;
+        font-family: 'Helvetica Neue', sans-serif;
+      }
+
+      .container {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 50px;
+        padding: 30px;
+      }
+
+      h1 {
+        color: #333;
+        text-align: center;
+      }
+
+      .row {
+        margin-bottom: 20px;
+      }
+
+      .form-control {
+        border-radius: 20px;
+      }
+
+      #submit-button {
+        border-radius: 20px;
+      }
+
+      .chat-container {
+        background-color: #f0f0f0;
+        border-radius: 10px;
+        padding: 20px;
+        margin-top: 20px;
+        max-height: 300px;
+        overflow-y: auto;
+      }
+
+      .user-message {
+        background-color: #dff0d8;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        padding: 10px;
+      }
+
+      .bot-message {
+        background-color: #d9edf7;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        padding: 10px;
+      }
+
+      #response {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to my Chatbot</h1>
+      <hr>
+
+      <div class="row">
+        <div class="col-lg-9">
+          <input class="form-control" type="text" name="question" id="question" placeholder="Type your question...">
+        </div>
+        <div class="col-lg-3">
+          <button class="btn btn-primary btn-block" id="submit-button">Send</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col chat-container" id="response-container">
+          <div id="response"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script>
+      jQuery(document).ready(function() {
+        $("#submit-button").click(function(e) {
+          e.preventDefault();
+
+          $.ajax({
+            type: "POST",
+            url: "/chatbot",
+            data: {
+              question: $("#question").val()
+            },
+            success: function(result) {
+              // Append user message
+              $("#response-container").append('<div class="user-message"><strong>You:</strong> ' + $("#question").val() + '</div>');
+              // Append bot message
+              $("#response-container").append('<div class="bot-message"><strong>Bot:</strong> ' + result.response + '</div>');
+              $("#question").val("");
+              $('#response-container').animate({scrollTop: $('#response-container').prop("scrollHeight")}, 500);
+            },
+            error: function(result) {
+              alert('Error!');
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

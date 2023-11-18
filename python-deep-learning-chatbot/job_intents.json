@@ -1,0 +1,683 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Chào bạn", 
+                  "Xin chào", 
+                  "Hey", 
+                  "Hi"],
+      "responses": ["Xin chào",
+                   "Hello"]
+    },
+    {
+      "tag": "deep_learning",
+      "patterns": ["Giới thiệu deep learning", 
+                  "neural networks học?", 
+                  "Ứng dụng deep learning", 
+                  "Sự khác biệt giữa ML và deep learning"],
+      "responses": [
+        "Deep learning là một phần của machine learning tập trung vào neural networks với nhiều lớp (deep neural networks).",
+        "Neural networks học thông qua quá trình gọi là backpropagation, điều chỉnh trọng số để giảm sai lệch giữa kết quả dự đoán và thực tế.",
+        "Deep learning được sử dụng trong các ứng dụng như nhận diện hình ảnh và giọng nói, xử lý ngôn ngữ tự nhiên và hệ thống tự động.",
+        "Trong khi machine learning là một khái niệm rộng lớn, deep learning cụ thể là về neural networks với nhiều lớp."
+      ]
+    },
+    {
+      "tag": "algorithms",
+      "patterns": ["Giới thiệu về thuật toán hồi quy", 
+                  "Classification là gì?", 
+                  "Giải thích về clustering", 
+                  "Decision trees", 
+                  "Random forests", 
+                  "Support vector machines"],
+      "responses": [
+        "Các thuật toán hồi quy được sử dụng để dự đoán kết quả liên tục dựa trên các đặc trưng đầu vào.",
+        "Classification liên quan đến phân loại dữ liệu đầu vào thành các lớp hoặc nhãn đã xác định trước.",
+        "Clustering là một kỹ thuật được sử dụng để nhóm các điểm dữ liệu tương tự lại với nhau dựa trên các đặc trưng của chúng.",
+        "Decision trees là một loại mô hình đưa ra quyết định dựa trên giá trị của các đặc trưng đầu vào.",
+        "Random forests là một phương pháp học tập tập trung vào việc kết hợp nhiều cây quyết định.",
+        "Support Vector Machines (SVM) được sử dụng cho các nhiệm vụ phân loại và hồi quy bằng cách tìm một siêu phẳng phân chia tốt nhất giữa các điểm dữ liệu."
+      ]
+    },
+    {
+      "tag": "deep_learning_algorithms",
+      "patterns": ["Giới thiệu về kiến trúc neural network", 
+                  "Convolutional Neural Networks (CNN)", 
+                  "Recurrent Neural Networks (RNN)", 
+                  "Long Short-Term Memory (LSTM)", 
+                  "Generative Adversarial Networks (GAN)", 
+                  "Transformer"],
+      "responses": [
+        "Kiến trúc neural network đề cập đến cấu trúc và kết nối của các mạng neural nhân tạo.",
+        "Convolutional Neural Networks (CNN) thường được sử dụng cho các nhiệm vụ nhận diện hình ảnh.",
+        "Recurrent Neural Networks (RNN) được thiết kế để xử lý dữ liệu tuần tự và được sử dụng trong các nhiệm vụ như xử lý ngôn ngữ tự nhiên.",
+        "Long Short-Term Memory (LSTM) là một dạng của RNN có khả năng ghi lại các phụ thuộc lâu dài.",
+        "Generative Adversarial Networks (GAN) bao gồm một generator và một discriminator, được đào tạo theo kiểu đối đầu để tạo ra dữ liệu thực tế.",
+        "Kiến trúc Transformer được rộng rãi sử dụng trong các nhiệm vụ xử lý ngôn ngữ tự nhiên, cho phép tối ưu hóa và nắm bắt các phụ thuộc xa."
+      ]
+    },
+    {
+      "tag": "supervised_learning_algorithms",
+      "patterns": ["Linear Regression", 
+                  "Logistic Regression", 
+                  "Naive Bayes", 
+                  "K-Nearest Neighbors (KNN)", 
+                  "Decision Trees", 
+                  "Random Forests", 
+                  "Support Vector Machines (SVM)"],
+      "responses": [
+        "Linear Regression là một phương pháp dự đoán giá trị đầu ra liên tục dựa trên các biến đầu vào.",
+        "Logistic Regression được sử dụng cho các nhiệm vụ phân loại để dự đoán xác suất của một sự kiện.",
+        "Naive Bayes là một thuật toán phân loại dựa trên giả định đơn giản về độc lập giữa các biến đầu vào.",
+        "K-Nearest Neighbors (KNN) phân loại dữ liệu dựa trên kết quả của các điểm láng giềng gần nhất.",
+        "Decision Trees là một loại mô hình quyết định dựa trên các quy tắc if-else được xây dựng từ dữ liệu.",
+        "Random Forests là một phương pháp ensemble sử dụng nhiều cây quyết định để cải thiện độ chính xác và giảm overfitting.",
+        "Support Vector Machines (SVM) tìm một siêu phẳng phân chia tốt nhất giữa các lớp trong không gian đa chiều."
+      ]
+    },
+    {
+      "tag": "unsupervised_learning_algorithms",
+      "patterns": ["K-Means", 
+                  "Hierarchical Clustering", 
+                  "Principal Component Analysis (PCA)", 
+                  "Apriori", "DBSCAN", 
+                  "Mean Shift", 
+                  "t-SNE"],
+      "responses": [
+        "K-Means là một thuật toán phân cụm phổ biến dựa trên việc gán các điểm dữ liệu vào các cụm dựa trên trung bình của chúng.",
+        "Hierarchical Clustering xây dựng một cây phân cấp của các cụm dựa trên sự tương đồng giữa chúng.",
+        "Principal Component Analysis (PCA) giảm số chiều của dữ liệu để giảm độ phức tạp và giữ lại thông tin quan trọng.",
+        "Apriori là một thuật toán khám phá luật kết hợp trong các tập dữ liệu transactional.",
+        "DBSCAN là một thuật toán phân cụm dựa trên việc xác định các vùng có mật độ cao của dữ liệu.",
+        "Mean Shift di chuyển các trung tâm cụm dựa trên độ dày cao nhất của mật độ.",
+        "t-SNE (t-Distributed Stochastic Neighbor Embedding) là một thuật toán giảm chiều dữ liệu giữ lại sự tương đồng giữa các điểm."
+      ]
+    },
+    {
+      "tag": "algorithm_1",
+      "patterns": ["Hãy nói về thuật toán sắp xếp."],
+      "responses": ["Thuật toán sắp xếp sắp xếp các phần tử theo một thứ tự cụ thể."]
+    },
+    {
+      "tag": "algorithm_2",
+      "patterns": ["Hãy giải thích cách hoạt động của thuật toán tìm kiếm nhị phân."],
+      "responses": ["Tìm kiếm nhị phân xác định một phần tử trong mảng đã sắp xếp bằng cách chia đoạn tìm kiếm thành các phần bằng nhau."]
+    },
+    {
+      "tag": "algorithm_3",
+      "patterns": ["Độ phức tạp thời gian của thuật toán sắp xếp nổi bọt là bao nhiêu?"],
+      "responses": ["Độ phức tạp thời gian của sắp xếp nổi bọt là O(n^2)."]
+    },
+    {
+      "tag": "algorithm_4",
+      "patterns": ["Mô tả thuật toán quicksort."],
+      "responses": ["Quicksort sử dụng chiến lược chia để trị để sắp xếp các phần tử."]
+    },
+    {
+      "tag": "algorithm_5",
+      "patterns": ["Bạn có thể giải thích khái niệm đằng sau lập trình động không?"],
+      "responses": ["Lập trình động là một phương pháp giải quyết vấn đề phức tạp bằng cách chia chúng thành các vấn đề con đơn giản hơn."]
+    },
+    {
+      "tag": "algorithm_6",
+      "patterns": ["Thảo luận về các ứng dụng của thuật toán duyệt theo chiều rộng."],
+      "responses": ["Duyệt theo chiều rộng được sử dụng để tìm đường đi ngắn nhất trong việc duyệt đồ thị."]
+    },
+    {
+      "tag": "algorithm_7",
+      "patterns": ["Ưu điểm của việc sử dụng thuật toán Dijkstra là gì?"],
+      "responses": ["Thuật toán Dijkstra tìm đường đi ngắn nhất và hiệu quả với đồ thị có trọng số."]
+    },
+    {
+      "tag": "algorithm_8",
+      "patterns": ["Thuật toán sắp xếp chèn hoạt động như thế nào?"],
+      "responses": ["Sắp xếp chèn xây dựng mảng đã sắp xếp cuối cùng một phần tử một lần."]
+    },
+    {
+      "tag": "algorithm_9",
+      "patterns": ["thuật toán tham lam."],
+      "responses": ["Thuật toán tham lam chọn lựa tối ưu cục bộ ở mỗi giai đoạn để đạt được giải pháp tối ưu toàn cục."]
+    },
+    {
+      "tag": "algorithm_10",
+      "patterns": ["merge sort"],
+      "responses": ["Merge sort được sử dụng để sắp xếp các phần tử bằng cách chia chúng thành các phần nhỏ hơn."]
+    },
+    {
+      "tag": "algorithm_11",
+      "patterns": ["quay lui trong thuật toán."],
+      "responses": ["Quay lui là một kỹ thuật giải quyết vấn đề bằng cách thăm dò tất cả các đường đi có thể."]
+    },
+    {
+      "tag": "algorithm_12",
+      "patterns": ["shell sort"],
+      "responses": ["Shell sort là một thuật toán sắp xếp hiệu quả dựa trên sắp xếp chèn."]
+    },
+    {
+      "tag": "algorithm_13",
+      "patterns": ["heap sort là gì?"],
+      "responses": ["Heap sort tạo ra một heap để sắp xếp các phần tử."]
+    },
+    {
+      "tag": "thuật_toán_14",
+      "patterns": ["Độ phức tạp thời gian của thuật toán sắp xếp chọn là bao nhiêu?"],
+      "responses": ["Độ phức tạp thời gian của sắp xếp chọn là O(n^2)."]
+    },
+    {
+      "tag": "thuật_toán_15",
+      "patterns": ["Thảo luận về khái niệm chia và trị trong thuật toán."],
+      "responses": ["Chia và trị phân chia một vấn đề phức tạp thành các vấn đề con nhỏ hơn và dễ quản lý hơn."]
+    },
+    {
+      "tag": "thuật_toán_16",
+      "patterns": ["Nguyên tắc hoạt động của thuật toán Floyd-Warshall là gì?"],
+      "responses": ["Floyd-Warshall tìm đường đi ngắn nhất trong đồ thị có trọng số."]
+    },
+    {
+      "tag": "thuật_toán_17",
+      "patterns": ["Giải thích khái niệm độ phức tạp thời gian trong thuật toán."],
+      "responses": ["Độ phức tạp thời gian đo lường thời gian mà một thuật toán mất để chạy."]
+    },
+    {
+      "tag": "thuật_toán_18",
+      "patterns": ["Thảo luận về nguyên tắc hoạt động của thuật toán radix sort."],
+      "responses": ["Radix sort sắp xếp số theo từng chữ số."]
+    },
+    {
+      "tag": "thuật_toán_19",
+      "patterns": ["Ứng dụng chính của thuật toán A* là gì?"],
+      "responses": ["A* là thuật toán tìm kiếm thông tin sử dụng heuristic để tìm đường đi ngắn nhất."]
+    },
+    {
+      "tag": "thuật_toán_20",
+      "patterns": ["Có thể giải thích về khái niệm băm trong thuật toán không?"],
+      "responses": ["Băm ánh xạ dữ liệu có kích thước tùy ý thành một giá trị cố định."]
+    },
+    {
+      "tag": "thuật_toán_21",
+      "patterns": ["Mô tả khái niệm đổi thời gian và không gian trong thuật toán."],
+      "responses": ["Đổi thời gian và không gian là việc sử dụng thêm không gian để giảm độ phức tạp thời gian của một thuật toán."]
+    },
+    {
+      "tag": "thuật_toán_22",
+      "patterns": ["Nguyên tắc hoạt động của bài toán Knapsack là gì?"],
+      "responses": ["Bài toán Knapsack tìm sự kết hợp tốt nhất của các mặt hàng mà không vượt quá trọng lượng đã xác định."]
+    },
+    {
+      "tag": "thuật_toán_23",
+      "patterns": ["Giải thích về thuật toán song song."],
+      "responses": ["Thuật toán song song thực hiện nhiều thao tác cùng một lúc."]
+    },
+    {
+      "tag": "thuật_toán_24",
+      "patterns": ["Ưu điểm của thuật toán Rabin-Karp là gì?"],
+      "responses": ["Thuật toán Rabin-Karp được sử dụng để tìm kiếm mẫu trong chuỗi."]
+    },
+    {
+      "tag": "thuật_toán_25",
+      "patterns": ["Đặc điểm của thuật toán Boyer-Moore là gì?"],
+      "responses": ["Boyer-Moore là thuật toán tìm kiếm chuỗi hiệu quả."]
+    },
+    {
+      "tag": "thuật_toán_26",
+      "patterns": ["Giải thích về thuật toán ngẫu nhiên."],
+      "responses": ["Thuật toán ngẫu nhiên sử dụng số ngẫu nhiên ít nhất một lần để xác định hành vi của chúng."]
+    },
+    {
+      "tag": "thuật_toán_27",
+      "patterns": ["Nguyên tắc hoạt động của bài toán người du lịch là gì?"],
+      "responses": ["Bài toán người du lịch tìm con đường ngắn nhất ghé thăm mỗi thành phố một lần và quay lại thành phố ban đầu."]
+    },
+    {
+      "tag": "thuật_toán_28",
+      "patterns": ["Ứng dụng chính của thuật toán Bellman-Ford là gì?"],
+      "responses": ["Thuật toán Bellman-Ford tìm đường đi ngắn nhất trong đồ thị có trọng số âm."]
+    },
+    {
+      "tag": "thuật_toán_29",
+      "patterns": ["Thảo luận về khái niệm độ phức tạp không gian trong thuật toán."],
+      "responses": ["Độ phức tạp không gian đo lường lượng bộ nhớ mà một thuật toán sử dụng."]
+    },
+    {
+      "tag": "trí_tuệ_nhân_tạo_1",
+      "patterns": ["Trí tuệ nhân tạo là gì?"],
+      "responses": ["Trí tuệ nhân tạo là lĩnh vực nghiên cứu về việc tạo ra máy tính hoạt động giống như con người."]
+    },
+    {
+      "tag": "trí_tuệ_nhân_tạo_2",
+      "patterns": ["Hãy nói về mô hình học máy."],
+      "responses": ["Mô hình học máy là một phương pháp mà máy tính tự học từ dữ liệu mà không cần lập trình cụ thể."]
+    },
+    {
+      "tag": "trí_tuệ_nhân_tạo_3",
+      "patterns": ["Nêu ứng dụng của trí tuệ nhân tạo trong thế giới thực."],
+      "responses": ["Trí tuệ nhân tạo được áp dụng trong tự lái xe, xử lý ngôn ngữ tự nhiên, chẩn đoán y tế, và nhiều lĩnh vực khác."]
+    },
+    {
+      "tag": "trí_tuệ_nhân_tạo_4",
+      "patterns": ["Tại sao học sâu quan trọng trong trí tuệ nhân tạo?"],
+      "responses": ["Học sâu (deep learning) cho phép máy tính học từ dữ liệu có cấu trúc phức tạp và giúp nâng cao hiệu suất của các mô hình học máy."]
+    },
+    {
+      "tag": "trí_tuệ_nhân_tạo_5",
+      "patterns": ["Cơ sở lý thuyết của trí tuệ nhân tạo là gì?"],
+      "responses": ["Trí tuệ nhân tạo dựa trên lý thuyết của việc tạo ra máy tính có khả năng suy luận, học hỏi và thực hiện các tác vụ thông minh."]
+    },
+    {
+      "tag": "trí_tuệ_nhân_tạo_6",
+      "patterns": ["Hãy nêu điểm khác biệt giữa học máy và học sâu."],
+      "responses": ["Học sâu là một phần của học máy, tập trung vào việc sử dụng các mô hình neural network sâu để hiểu và học từ dữ liệu."]
+    },
+    {
+      "tag": "trí_tuệ_nhân_tạo_7",
+      "patterns": ["Nêu các ứng dụng của trí tuệ nhân tạo trong dự đoán thị trường tài chính."],
+      "responses": ["Trí tuệ nhân tạo được sử dụng trong việc dự đoán thị trường tài chính để phân tích dữ liệu và dự đoán xu hướng thị trường."]
+    },
+    {
+      "tag": "trí_tuệ_nhân_tạo_8",
+      "patterns": ["Học máy có vai trò gì trong trí tuệ nhân tạo?"],
+      "responses": ["Học máy là một phần quan trọng trong trí tuệ nhân tạo, tập trung vào việc xây dựng mô hình và dự đoán dựa trên dữ liệu."]
+    },
+    {
+      "tag": "trí_tuệ_nhân_tạo_9",
+      "patterns": ["Trí tuệ nhân tạo có ứng dụng trong lĩnh vực y tế không?"],
+      "responses": ["Trí tuệ nhân tạo được áp dụng trong y tế để hỗ trợ chuẩn đoán, phân loại bệnh, và dự đoán kết quả điều trị."]
+    },
+    {
+      "tag": "trí_tuệ_nhân_tạo_10",
+      "patterns": ["Hãy nêu các phương pháp học máy phổ biến trong trí tuệ nhân tạo."],
+      "responses": ["Các phương pháp phổ biến bao gồm học giám sát, học không giám sát và học tăng cường."]
+    },
+    {
+      "tag": "trí_tuệ_nhân_tạo_11",
+      "patterns": ["Trí tuệ nhân tạo có thể giúp giải quyết các vấn đề xã hội không?"],
+      "responses": ["Có, trí tuệ nhân tạo có thể giải quyết các vấn đề xã hội như quản lý năng lượng, y tế công cộng, và bảo vệ môi trường."]
+    },
+    {
+      "tag": "trí_tuệ_nhân_tạo_12",
+      "patterns": ["Nêu các ứng dụng của trí tuệ nhân tạo trong công nghệ."],
+      "responses": ["Trí tuệ nhân tạo được sử dụng trong công nghệ để tăng cường trải nghiệm người dùng và tối ưu hóa quy trình sản xuất."]
+    },
+    {
+      "tag": "trí_tuệ_nhân_tạo_13",
+      "patterns": ["Tại sao học máy được coi là một phần quan trọng của trí tuệ nhân tạo?"],
+      "responses": ["Học máy giúp máy tính học từ dữ liệu để tự cải thiện hiệu suất mà không cần phải được lập trình cụ thể."]
+    },
+    {
+      "tag": "trí_tuệ_nhân_tạo_14",
+      "patterns": ["Trí tuệ nhân tạo có thể tăng cường lĩnh vực nào khác nhau?"],
+      "responses": ["Trí tuệ nhân tạo có thể tăng cường lĩnh vực như giáo dục, nông nghiệp, và quản lý tài nguyên."]
+    },
+    {
+      "tag": "trí_tuệ_nhân_tạo_15",
+      "patterns": ["Hãy nói về mô hình học sâu trong trí tuệ nhân tạo."],
+      "responses": ["Mô hình học sâu là một loại mô hình học máy với các lớp neural network sâu và khả năng học từ dữ liệu lớn."]
+    },
+    {
+      "tag": "trí_tuệ_nhân_tạo_16",
+      "patterns": ["Nêu các phương pháp học không giám sát trong trí tuệ nhân tạo."],
+      "responses": ["Các phương pháp bao gồm phân cụm, giảm chiều dữ liệu, và trích xuất đặc trưng."]
+    },
+    {
+      "tag": "trí_tuệ_nhân_tạo_17",
+      "patterns": ["Thuật toán k-mean clustering có ứng dụng gì trong trí tuệ nhân tạo?"],
+      "responses": ["K-mean clustering được sử dụng để phân cụm dữ liệu và phân loại các nhóm tương tự."]
+    },
+    {
+      "tag": "trí_tuệ_nhân_tạo_18",
+      "patterns": ["Trí tuệ nhân tạo ảnh hưởng đến lĩnh vực công nghệ thông tin như thế nào?"],
+      "responses": ["Trí tuệ nhân tạo cải thiện quy trình tự động hóa và tăng cường an ninh thông tin."]
+    },
+    {
+      "tag": "trí_tuệ_nhân_tạo_19",
+      "patterns": ["Hãy nói về khía cạnh đạo đức trong trí tuệ nhân tạo."],
+      "responses": ["Khía cạnh đạo đức đòi hỏi việc xây dựng và sử dụng trí tuệ nhân tạo một cách đúng đắn và minh bạch."]
+    },
+    {
+      "tag": "trí_tuệ_nhân_tạo_20",
+      "patterns": ["Trí tuệ nhân tạo ảnh hưởng đến việc thay đổi nghề nghiệp như thế nào?"],
+      "responses": ["Trí tuệ nhân tạo tạo ra cơ hội mới trong ngành công nghiệp và yêu cầu các kỹ năng mới từ người lao động."]
+    },
+    {
+      "tag": "trí_tuệ_nhân_tạo_21",
+      "patterns": ["Hãy nói về việc sử dụng trí tuệ nhân tạo trong sinh học."],
+      "responses": ["Trí tuệ nhân tạo được áp dụng trong nghiên cứu y sinh để phân tích dữ liệu gen và dự đoán các phản ứng dược lý."]
+    },
+    {
+      "tag": "trí_tuệ_nhân_tạo_22",
+      "patterns": ["Trí tuệ nhân tạo có thể giải quyết vấn đề biến đổi khí hậu không?"],
+      "responses": ["Trí tuệ nhân tạo được sử dụng trong việc dự đoán và giảm thiểu ảnh hưởng của biến đổi khí hậu."]
+    },
+    {
+      "tag": "trí_tuệ_nhân_tạo_23",
+      "patterns": ["Nêu các ứng dụng của trí tuệ nhân tạo trong ngành sản xuất."],
+      "responses": ["Trí tuệ nhân tạo cải thiện quy trình sản xuất và tối ưu hóa hiệu suất."]
+    },
+    {
+      "tag": "trí_tuệ_nhân_tạo_24",
+      "patterns": ["Trí tuệ nhân tạo có thể ứng dụng trong lĩnh vực năng lượng không?"],
+      "responses": ["Có, trí tuệ nhân tạo có thể giúp tối ưu hóa sử dụng năng lượng và quản lý lưới điện."]
+    },
+    {
+      "tag": "trí_tuệ_nhân_tạo_25",
+      "patterns": ["Mô hình GAN trong trí tuệ nhân tạo là gì?"],
+      "responses": ["GAN (Generative Adversarial Networks) là một mô hình học máy sử dụng trong việc tạo ra dữ liệu mới từ dữ liệu cũ."]
+    },
+    {
+      "tag": "trí_tuệ_nhân_tạo_26",
+      "patterns": ["Nêu ví dụ về trí tuệ nhân tạo trong các hệ thống thông minh."],
+      "responses": ["Trí tuệ nhân tạo được sử dụng trong các hệ thống như trợ lý ảo, nhận diện giọng nói và xử lý ngôn ngữ tự nhiên."]
+    },
+    {
+      "tag": "trí_tuệ_nhân_tạo_27",
+      "patterns": ["Trí tuệ nhân tạo và khai phá dữ liệu có mối liên hệ như thế nào?"],
+      "responses": ["Trí tuệ nhân tạo sử dụng phương pháp khai phá dữ liệu để rút trích thông tin quan trọng từ dữ liệu lớn."]
+    },
+    {
+      "tag": "trí_tuệ_nhân_tạo_28",
+      "patterns": ["Hãy nói về các ứng dụng của trí tuệ nhân tạo trong đám mây và IoT."],
+      "responses": ["Trí tuệ nhân tạo được tích hợp trong đám mây và IoT để phân tích và quản lý dữ liệu từ các thiết bị kết nối."]
+    },
+    {
+      "tag": "new_tech_1",
+      "patterns": ["Công nghệ mới nổi bật hiện nay là gì?"],
+      "responses": ["Có rất nhiều công nghệ mới, bao gồm trí tuệ nhân tạo, blockchain, IoT và nhiều hơn nữa."]
+    },
+    {
+      "tag": "new_tech_2",
+      "patterns": ["Có công nghệ nào tiềm năng thay đổi cuộc sống không?"],
+      "responses": ["Nhiều công nghệ đang thay đổi cuộc sống, chẳng hạn như trí tuệ nhân tạo, thực tế ảo và máy học."]
+    },
+    {
+      "tag": "new_tech_3",
+      "patterns": ["Có công nghệ nào đang phát triển mạnh mẽ không?"],
+      "responses": ["Trí tuệ nhân tạo, machine learning và robot là những lĩnh vực đang phát triển mạnh mẽ."]
+    },
+    {
+      "tag": "new_tech_4",
+      "patterns": ["Công nghệ mới có ứng dụng trong lĩnh vực nào?"],
+      "responses": ["Công nghệ mới áp dụng trong y tế, giáo dục, kỹ thuật, và nhiều lĩnh vực khác."]
+    },
+    {
+      "tag": "new_tech_5",
+      "patterns": ["Loại công nghệ nào đang thúc đẩy sự tiến bộ xã hội?"],
+      "responses": ["Trí tuệ nhân tạo, blockchain và Internet of Things (IoT) đều đóng góp vào sự tiến bộ xã hội."]
+    },
+    {
+      "tag": "new_tech_6",
+      "patterns": ["Có công nghệ nào sẽ thay đổi cách chúng ta làm việc không?"],
+      "responses": ["Trí tuệ nhân tạo, tự động hóa và máy học đang thay đổi cách làm việc của chúng ta."]
+    },
+    {
+      "tag": "new_tech_7",
+      "patterns": ["Công nghệ mới sẽ ảnh hưởng như thế nào đến cuộc sống hàng ngày?"],
+      "responses": ["Công nghệ mới sẽ cải thiện hiệu quả công việc, cung cấp giải pháp sáng tạo và tạo ra những trải nghiệm mới."]
+    },
+    {
+      "tag": "new_tech_8",
+      "patterns": ["Có công nghệ nào đang thu hút sự quan tâm lớn từ công chúng không?"],
+      "responses": ["Trí tuệ nhân tạo, blockchain và phát triển IoT đều thu hút sự chú ý rất lớn."]
+    },
+    {
+      "tag": "new_tech_9",
+      "patterns": ["Công nghệ mới có thể giúp giải quyết vấn đề toàn cầu không?"],
+      "responses": ["Công nghệ mới như trí tuệ nhân tạo và IoT có thể giúp giải quyết các vấn đề toàn cầu như biến đổi khí hậu và y tế."]
+    },
+    {
+      "tag": "new_tech_10",
+      "patterns": ["Có công nghệ nào đang thay đổi cách chúng ta tương tác với máy móc không?"],
+      "responses": ["Trí tuệ nhân tạo, giao diện người-máy và tự động hóa đều thay đổi cách chúng ta tương tác với máy móc."]
+    },
+    {
+      "tag": "new_tech_11",
+      "patterns": ["Có công nghệ nào đang ảnh hưởng lớn đến ngành công nghiệp không?"],
+      "responses": ["Công nghệ 4.0 như trí tuệ nhân tạo và tự động hóa đang ảnh hưởng lớn đến ngành công nghiệp."]
+    },
+    {
+      "tag": "new_tech_12",
+      "patterns": ["Loại công nghệ nào đang đặt ra những thách thức mới cho xã hội?"],
+      "responses": ["Công nghệ ứng dụng trí tuệ nhân tạo và robot đặt ra những thách thức mới cho xã hội."]
+    },
+    {
+      "tag": "new_tech_13",
+      "patterns": ["Công nghệ mới có thể tạo ra cơ hội kinh doanh không?"],
+      "responses": ["Công nghệ mới thường tạo ra cơ hội kinh doanh mới, đặc biệt là trong lĩnh vực công nghệ thông tin và dịch vụ."]
+    },
+    {
+      "tag": "new_tech_14",
+      "patterns": ["Công nghệ mới có thể ảnh hưởng đến giáo dục không?"],
+      "responses": ["Công nghệ ứng dụng trong giáo dục như trí tuệ nhân tạo và máy học có thể thay đổi cách chúng ta học tập."]
+    },
+    {
+      "tag": "new_tech_15",
+      "patterns": ["Công nghệ mới có thể giúp cải thiện chất lượng cuộc sống không?"],
+      "responses": ["Công nghệ mới như trí tuệ nhân tạo và IoT có thể cải thiện chất lượng cuộc sống thông qua các giải pháp sáng tạo."]
+    },
+    {
+      "tag": "new_tech_16",
+      "patterns": ["Công nghệ mới có thể tạo ra biến đổi xã hội không?"],
+      "responses": ["Công nghệ mới thường tạo ra các biến đổi xã hội, tác động đến nhiều khía cạnh trong cuộc sống hàng ngày."]
+    },
+    {
+      "tag": "new_tech_17",
+      "patterns": ["Công nghệ mới có thể gây ra những thay đổi về môi trường không?"],
+      "responses": ["Công nghệ mới có thể cung cấp giải pháp cho các vấn đề môi trường, giúp giảm phát thải và tối ưu hóa tài nguyên."]
+    },
+    {
+      "tag": "new_tech_18",
+      "patterns": ["Công nghệ mới có thể ảnh hưởng đến ngành du lịch không?"],
+      "responses": ["Công nghệ 4.0 như IoT và trí tuệ nhân tạo có thể tạo ra trải nghiệm du lịch mới và thông minh."]
+    },
+    {
+      "tag": "new_tech_19",
+      "patterns": ["Công nghệ mới có thể giúp cải thiện sức khỏe không?"],
+      "responses": ["Công nghệ mới như trí tuệ nhân tạo và bệnh viện thông minh có thể cải thiện chăm sóc sức khỏe."]
+    },
+    {
+      "tag": "new_tech_20",
+      "patterns": ["Công nghệ mới có thể ứng dụng trong việc giải quyết vấn đề nghèo đói không?"],
+      "responses": ["Công nghệ mới có thể cung cấp giải pháp sáng tạo cho vấn đề nghèo đói và phát triển bền vững."]
+    },
+    {
+      "tag": "new_tech_21",
+      "patterns": ["Công nghệ mới có thể giúp cải thiện giao thông không?"],
+      "responses": ["Công nghệ mới như phương tiện tự lái và thông tin giao thông thông minh có thể cải thiện giao thông."]
+    },
+    {
+      "tag": "new_tech_22",
+      "patterns": ["Công nghệ mới có thể ứng dụng trong lĩnh vực năng lượng không?"],
+      "responses": ["Công nghệ mới có thể cải thiện việc sản xuất và sử dụng năng lượng thông qua các giải pháp sáng tạo."]
+    },
+    {
+      "tag": "new_tech_23",
+      "patterns": ["Công nghệ mới có thể đóng vai trò quan trọng trong ngành công nghiệp không?"],
+      "responses": ["Công nghệ mới thường đóng vai trò quan trọng trong việc tạo ra các quy trình sản xuất hiệu quả hơn."]
+    },
+    {
+      "tag": "new_tech_24",
+      "patterns": ["Công nghệ mới có thể góp phần vào việc bảo vệ môi trường không?"],
+      "responses": ["Công nghệ mới có thể cung cấp các giải pháp thông minh để bảo vệ môi trường và tài nguyên."]
+    },
+    {
+      "tag": "new_tech_25",
+      "patterns": ["Công nghệ mới có thể giúp cải thiện an ninh và an toàn không?"],
+      "responses": ["Công nghệ mới như trí tuệ nhân tạo và hệ thống an ninh thông minh có thể cải thiện an ninh."]
+    },
+    {
+      "tag": "new_tech_26",
+      "patterns": ["Công nghệ mới có thể ứng dụng trong việc giáo dục không?"],
+      "responses": ["Công nghệ mới có thể cải thiện phương pháp giáo dục và tạo ra trải nghiệm học tập mới."]
+    },
+    {
+      "tag": "new_tech_27",
+      "patterns": ["Công nghệ mới có thể giúp cải thiện việc quản lý dữ liệu không?"],
+      "responses": ["Công nghệ mới có thể cung cấp các giải pháp hiệu quả cho việc quản lý dữ liệu lớn."]
+    },
+    {
+      "tag": "new_tech_28",
+      "patterns": ["Công nghệ mới có thể thay đổi cách chúng ta làm việc không?"],
+      "responses": ["Công nghệ mới như trí tuệ nhân tạo và tự động hóa có thể thay đổi cách làm việc của chúng ta."]
+    },
+    {
+      "tag": "new_tech_29",
+      "patterns": ["Công nghệ mới có thể ứng dụng trong việc giải quyết vấn đề toàn cầu không?"],
+      "responses": ["Công nghệ mới có thể cung cấp giải pháp cho các vấn đề toàn cầu như biến đổi khí hậu và y tế."]
+    },
+    {
+      "tag": "new_tech_30",
+      "patterns": ["Công nghệ mới có thể giúp cải thiện chất lượng cuộc sống không?"],
+      "responses": ["Công nghệ mới như trí tuệ nhân tạo và IoT có thể cải thiện chất lượng cuộc sống thông qua các giải pháp sáng tạo."]
+    },
+    {
+      "tag": "lập_trình_1",
+      "patterns": ["Lập trình là gì?"],
+      "responses": ["Lập trình là quá trình tạo ra các chương trình máy tính để thực hiện các nhiệm vụ cụ thể."]
+    },
+    {
+      "tag": "lập_trình_2",
+      "patterns": ["Ngôn ngữ lập trình nào nên học đầu tiên?"],
+      "responses": ["Python là một lựa chọn phổ biến cho người mới bắt đầu vì cú pháp dễ đọc và sử dụng."]
+    },
+    {
+      "tag": "lập_trình_3",
+      "patterns": ["Tại sao học lập trình quan trọng?"],
+      "responses": ["Học lập trình giúp bạn phát triển logic tư duy và có khả năng giải quyết vấn đề tốt hơn."]
+    },
+    {
+      "tag": "lập_trình_4",
+      "patterns": ["Làm thế nào để học lập trình hiệu quả?"],
+      "responses": ["Học lập trình cần kiên nhẫn, thực hành nhiều và xây dựng các dự án thực tế."]
+    },
+    {
+      "tag": "lập_trình_5",
+      "patterns": ["Có những loại lập trình nào phổ biến?"],
+      "responses": ["Có nhiều loại lập trình phổ biến như web development, mobile app development và data science."]
+    },
+    {
+      "tag": "lập_trình_6",
+      "patterns": ["Lập trình có thể ứng dụng trong lĩnh vực nào?"],
+      "responses": ["Lập trình áp dụng rộng rãi trong y tế, giáo dục, kinh doanh và nhiều lĩnh vực khác."]
+    },
+    {
+      "tag": "lập_trình_7",
+      "patterns": ["Làm thế nào để trở thành lập trình viên giỏi?"],
+      "responses": ["Hãy liên tục học hỏi, thực hành nhiều và tham gia vào các dự án thực tế."]
+    },
+    {
+      "tag": "lập_trình_8",
+      "patterns": ["Tại sao phát triển phần mềm cần đến kiến thức lập trình?"],
+      "responses": ["Kiến thức lập trình giúp hiểu rõ cách các phần mềm hoạt động và tối ưu hóa quá trình phát triển."]
+    },
+    {
+      "tag": "lập_trình_9",
+      "patterns": ["Lập trình web có khó không?"],
+      "responses": ["Không khó nếu bạn bắt đầu từ các nguyên tắc cơ bản và tập trung vào việc học một cách liên tục."]
+    },
+    {
+      "tag": "lập_trình_10",
+      "patterns": ["Ngôn ngữ lập trình nào phù hợp với phát triển game?"],
+      "responses": ["Có nhiều ngôn ngữ lập trình phát triển game như C++, Java và Python."]
+    },
+    {
+      "tag": "lập_trình_11",
+      "patterns": ["Làm thế nào để tìm kiếm thông tin khi gặp vấn đề lập trình?"],
+      "responses": ["Thường xuyên tra cứu trên Internet, tham gia các diễn đàn và đọc tài liệu kỹ thuật."]
+    },
+    {
+      "tag": "lập_trình_12",
+      "patterns": ["Lập trình có thể giúp tăng cường kỹ năng gì?"],
+      "responses": ["Lập trình giúp cải thiện logic tư duy, tư duy sáng tạo và khả năng giải quyết vấn đề."]
+    },
+    {
+      "tag": "lập_trình_13",
+      "patterns": ["Làm thế nào để thực hành lập trình một cách hiệu quả?"],
+      "responses": ["Thực hành thông qua việc làm các dự án thực tế và giải quyết các bài toán lập trình."]
+    },
+    {
+      "tag": "lập_trình_14",
+      "patterns": ["Làm thế nào để bắt đầu học lập trình nếu không có kiến thức trước?"],
+      "responses": ["Bắt đầu từ các nguyên tắc cơ bản của một ngôn ngữ lập trình và xây dựng từ đó."]
+    },
+    {
+      "tag": "lập_trình_15",
+      "patterns": ["Lập trình có đồng nghĩa với code không?"],
+      "responses": ["Lập trình thường liên quan đến việc viết code để tạo ra các ứng dụng máy tính."]
+    },
+    {
+      "tag": "lập_trình_16",
+      "patterns": ["Lập trình có quan trọng không trong kỷ nguyên công nghệ?"],
+      "responses": ["Lập trình rất quan trọng vì nó tạo ra cơ sở của nhiều sản phẩm công nghệ hiện đại."]
+    },
+    {
+      "tag": "lập_trình_17",
+      "patterns": ["Lập trình viên cần có kỹ năng gì ngoài việc viết code?"],
+      "responses": ["Lập trình viên cần có kỹ năng giao tiếp, giải quyết vấn đề và làm việc nhóm."]
+    },
+    {
+      "tag": "lập_trình_18",
+      "patterns": ["Làm thế nào để giải quyết lỗi khi viết code?"],
+      "responses": ["Debug thông qua việc kiểm tra từng bước và sử dụng các công cụ hỗ trợ để tìm lỗi."]
+    },
+    {
+      "tag": "lập_trình_19",
+      "patterns": ["Tại sao lập trình viên cần học hỏi liên tục?"],
+      "responses": ["Công nghệ và công cụ liên quan đến lập trình thay đổi nhanh chóng, vì vậy việc học liên tục là quan trọng."]
+    },
+    {
+      "tag": "lập_trình_20",
+      "patterns": ["Làm thế nào để chuẩn bị tốt cho một cuộc phỏng vấn lập trình?"],
+      "responses": ["Nắm vững kiến thức cơ bản, thực hành giải các bài tập và ôn lại các thuật toán cơ bản."]
+    },
+    {
+      "tag": "lập_trình_21",
+      "patterns": ["Lập trình có quan trọng trong đời sống hàng ngày không?"],
+      "responses": ["Lập trình đã thấm vào mọi khía cạnh của đời sống hàng ngày, từ các ứng dụng di động đến các hệ thống điều khiển."]
+    },
+    {
+      "tag": "lập_trình_22",
+      "patterns": ["Lập trình viên cần phải hiểu về gì ngoài kiến thức lập trình?"],
+      "responses": ["Hiểu về các nguyên lý thiết kế, cơ sở dữ liệu và cách làm việc với hệ thống quy mô lớn."]
+    },
+    {
+      "tag": "lập_trình_23",
+      "patterns": ["Làm thế nào để trở thành lập trình viên tự do (freelancer) thành công?"],
+      "responses": ["Xây dựng danh tiếng qua các dự án, quảng bá bản thân và xác định rõ ràng về khả năng và giá trị của mình."]
+    },
+    {
+      "tag": "lập_trình_24",
+      "patterns": ["Làm thế nào để cải thiện kỹ năng code của mình?"],
+      "responses": ["Thực hành nhiều, học từ mã nguồn mở và tham gia các cộng đồng lập trình."]
+    },
+    {
+      "tag": "lập_trình_25",
+      "patterns": ["Làm thế nào để tạo ra một ứng dụng di động đơn giản?"],
+      "responses": ["Bắt đầu với việc học lập trình di động và thực hành qua việc xây dựng ứng dụng nhỏ."]
+    },
+    {
+      "tag": "lập_trình_26",
+      "patterns": ["Làm thế nào để tự học lập trình một cách hiệu quả?"],
+      "responses": ["Tự học cần có kế hoạch, đặt mục tiêu cụ thể và kiên nhẫn trong quá trình học."]
+    },
+    {
+      "tag": "lập_trình_27",
+      "patterns": ["Làm thế nào để tiếp cận công việc lập trình nhanh chóng?"],
+      "responses": ["Xây dựng portfolio, tham gia các dự án và tìm kiếm cơ hội thực tập hoặc làm việc part-time."]
+    },
+    {
+      "tag": "lập_trình_28",
+      "patterns": ["Làm thế nào để học lập trình mà không cần điều kiện đặc biệt về toán học?"],
+      "responses": ["Lập trình cần logic hơn là toán học phức tạp, vì vậy không cần phải lo lắng nếu bạn không giỏi toán."]
+    },
+    {
+      "tag": "lập_trình_29",
+      "patterns": ["Làm thế nào để học lập trình một cách thú vị?"],
+      "responses": ["Tìm các dự án thú vị, thực hành làm sản phẩm và tìm cộng đồng chia sẻ kiến thức."]
+    },
+    {
+      "tag": "lập_trình_30",
+      "patterns": ["Làm thế nào để tự học lập trình một cách hiệu quả?"],
+      "responses": ["Xác định mục tiêu cụ thể, chia nhỏ kiến thức và thực hành nhiều để cải thiện."]
+    }
+  
+  ]
+}
