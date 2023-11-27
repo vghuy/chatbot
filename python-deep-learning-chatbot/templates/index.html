@@ -91,6 +91,12 @@
           <div id="response"></div>
         </div>
       </div>
+
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <button class="btn btn-danger" id="logout-button">Đăng Xuất</button>
+        </div>
+      </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
@@ -120,8 +126,20 @@
               alert('Error!');
             }
           });
+        })
+        $("#logout-button").click(function(e) {
+          e.preventDefault();
+          $.ajax({
+            type: "POST",
+            url: "/logout",
+            success: function(result){
+              window.location.href = "/";
+            },
+            error: function(result){ alert('Error!');}
+              
+            }); 
+          }); 
         });
-      });
     </script>
-  </body>
+</body>
 </html>
