@@ -11,7 +11,7 @@ import pickle
 import time
 
 # Đặt thời gian giữa các yêu cầu
-WAIT_TIME_BETWEEN_REQUESTS = 3
+WAIT_TIME_BETWEEN_REQUESTS = 1
 
 last_request_time = time.time()
 
@@ -21,7 +21,7 @@ intents = json.loads(open('job_intents.json', encoding='utf-8').read())
 words = pickle.load(open('words.pkl','rb'))
 classes = pickle.load(open('classes.pkl','rb'))
 
-openai.api_key = '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'
+openai.api_key = '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'
 engine = "text-davinci-003"  
 
 def clean_up_sentence(sentence):
@@ -43,7 +43,7 @@ def bow(sentence, words, show_details=True):
 def predict_class(sentence, model):
     p = bow(sentence, words, show_details=False)
     res = model.predict(np.array([p]))[0]
-    ERROR_THRESHOLD = 0.25
+    ERROR_THRESHOLD = 0.5
     results = [[i, r] for i, r in enumerate(res) if r > ERROR_THRESHOLD]
     results.sort(key=lambda x: x[1], reverse=True)
     return_list = []
@@ -52,15 +52,21 @@ def predict_class(sentence, model):
     return return_list
 
 def getResponse(ints, intents_json):
-    tag = ints[0]['intent']
-    list_of_intents = intents_json['intents']
-    for i in list_of_intents:
-        if i['tag'] == tag:
-            result = random.choice(i['responses'])
-            break
-        else:
-            result = "You must ask the right questions"
-    return result
+
+    if ints:
+        tag = ints[0]['intent']
+        # Xử lý khi danh sách ints rỗng
+        list_of_intents = intents_json['intents']
+        for i in list_of_intents:
+            if i['tag'] == tag:
+                result = random.choice(i['responses'])
+                break
+            else:
+                result = "You must ask the right questions"
+        return result
+    else:
+        result = "Sorry, I don't understand that."
+
 
 # Đường dẫn đến tệp lưu trữ kết quả
 CACHE_FILE_PATH = 'cache.pkl'
@@ -107,7 +113,7 @@ def generate_gpt_response(prompt):
         engine=engine,
         prompt=prompt,
         temperature=0.7,
-        max_tokens=256,
+        max_tokens=1200,
         n=1,
         stop=None
     )
@@ -141,3 +147,4 @@ def chatbot_response(msg):
         return gpt_response
     
     return gpt_response
+    
